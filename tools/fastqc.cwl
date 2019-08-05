@@ -146,22 +146,22 @@ outputs:
     outputBinding:
       glob: "*/summary.txt"
 
-  # stderr_log:
-  #   type: File
-  #   outputBinding:
-  #     glob: "stderr.log"
+  stderr_log:
+    type: File
+    outputBinding:
+      glob: "stderr.log"
 
-  # stdout_log:
-  #   type: File
-  #   outputBinding:
-  #     glob: "stdout.log"
+  stdout_log:
+    type: File
+    outputBinding:
+      glob: "stdout.log"
 
 
 baseCommand: [fastqc, --extract, --outdir, .]
 
 
-# stderr: stderr.log
-# stdout: stdout.log
+stderr: stderr.log
+stdout: stdout.log
 
 
 $namespaces:
