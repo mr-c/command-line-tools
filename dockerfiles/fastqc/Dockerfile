@@ -7,7 +7,7 @@
 # Website:          http://www.bioinformatics.babraham.ac.uk/projects/fastqc
 # Provides:         FastQC 0.11.8
 # Base Image:       ubuntu:18.04
-# Build Cmd:        docker build --rm -t cwlhub/fastqc:v0.0.1 -f fastqc-Dockerfile .
+# Build Cmd:        docker build --rm -t cwlhub/fastqc:v0.0.1 .
 # Pull Cmd:         docker pull cwlhub/fastqc:v0.0.1
 # Run Cmd:          docker run --rm -ti cwlhub/fastqc:v0.0.1 fastqc --version
 #################################################################
