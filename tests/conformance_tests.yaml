@@ -1,0 +1,60 @@
+# ========================================================
+# fastqc
+# ========================================================
+
+- job: ./fastqc-1.json
+  tool: ../tools/fastqc.cwl
+  doc: Run analyses with FASTQ file
+  output:
+    summary_file:
+      class: File
+      location: summary.txt
+      size: 505
+    zipped_file:
+      class: File
+      location: upstream_fastqc.zip
+    html_file:
+      class: File
+      location: upstream_fastqc.html
+    stdout_log:
+      class: File
+      location: stdout.log
+    stderr_log:
+      class: File
+      location: stderr.log
+
+- job: ./fastqc-2.json
+  tool: ../tools/fastqc.cwl
+  doc: Run analyses with BAM file
+  output:
+    summary_file:
+      class: File
+      location: summary.txt
+      size: 494
+    zipped_file:
+      class: File
+      location: mapped_reads_fastqc.zip
+    html_file:
+      class: File
+      location: mapped_reads_fastqc.html
+    stdout_log:
+      class: File
+      location: stdout.log
+    stderr_log:
+      class: File
+      location: stderr.log
+
+- job: ./fastqc-3.json
+  tool: ../tools/fastqc.cwl
+  doc: Force to treat input as BAM file
+  output:
+    summary_file:
+      class: File
+      location: summary.txt
+      size: 494
+    zipped_file:
+      class: File
+      location: mapped_reads_fastqc.zip
+    html_file:
+      class: File
+      location: mapped_reads_fastqc.html
